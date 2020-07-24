@@ -1,0 +1,7 @@
+.press-list {
+    list-style-type: none;
+}
+
+.press-list li {
+    margin-bottom: 18px;
+}

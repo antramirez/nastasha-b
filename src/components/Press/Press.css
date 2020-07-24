@@ -1,0 +1,35 @@
+.press-container {
+    display: block;
+}
+
+
+.press-container span {
+    display: none;
+}
+
+.press-container p {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.press-container p::before {
+    content: '>';
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    left: -12px;
+    top: -2px;
+}
+
+.press-container iframe {
+
+    margin: 18px auto 30px auto;
+}
+
+.hidden-iframe {
+    display: none;
+}
+
+.active-iframe {
+    display: block;
+}
