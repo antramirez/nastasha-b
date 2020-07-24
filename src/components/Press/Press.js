@@ -13,11 +13,10 @@ export default function Press( {title="", link=""} ) {
 
     return(
         <div className="press-container">
-        <span>arrow</span>
-        <p onClick={(e) => clickHandler(e)}>{title}</p>
-        {link}
+            <span>arrow</span>
+            <p onClick={(e) => clickHandler(e)}>{title}</p>
+            {link}
         </div>
-        
     )
 }
 

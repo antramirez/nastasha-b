@@ -1,0 +1,35 @@
+.photos-container {
+    width: 100%;
+    /* height: auto; */
+}
+.photo-container {
+    width: 50%;
+    height: auto;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.photo-col {
+    width: 50%;
+    float: left;
+
+}
+.photo-left-col {
+    padding-right: 10px;
+}
+.photo-right-col {
+    padding-left: 10px;
+
+}
+.photo-col img {
+    width: 100%;
+
+    display: block;
+    margin-bottom: 18px;
+}
+
+
+.clear {
+    clear: both;
+}

@@ -1,0 +1,30 @@
+.lyrics-container {
+    width: 100%;
+}
+
+.lyrics-container .song-row {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.song-col, .song-col {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    padding:10px;
+    overflow: scroll;
+}
+
+
+.song-title-container {
+    text-align: center;
+}
+
+.song-title {
+    line-height: 300px;
+    font-size: 144px;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 180px;;
+}

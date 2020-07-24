@@ -10,7 +10,6 @@ export default function NavMenu() {
                 <div className="logo-container">
                     <NavLink to="/"><img src={logo} alt="N.B." /></NavLink>
                 </div>
-                
                 <ul>
                     <li><NavLink to="/about">About</NavLink></li>
                     <li><NavLink to="/visuals">Visuals</NavLink></li>
