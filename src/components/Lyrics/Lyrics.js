@@ -3,8 +3,8 @@ import './Lyrics.css'
 
 export default function Lyrics() {
     return(
-        <>
-            <h1>Lyrics</h1>
+        <div className="medium-container">
+        <h1>Lyrics</h1>
             <div className="lyrics-container">
                 <div className="song-row">
                     <div className="song-col song-title-container">
@@ -52,6 +52,6 @@ export default function Lyrics() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }

@@ -5,7 +5,7 @@ import photo2 from '../../IMG_1302.jpeg'
 
 export default function Photos() {
     return(
-        <>
+        <div className="medium-container">
         <h1>Photos</h1>
         <div className="photos-container">
             <div className="photo-col photo-left-col">
@@ -18,6 +18,6 @@ export default function Photos() {
             </div>
             <div className="clear"></div>
         </div>
-        </>
+        </div>
     )
 }

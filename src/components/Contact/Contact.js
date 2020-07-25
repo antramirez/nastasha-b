@@ -3,7 +3,7 @@ import './Contact.css'
 
 export default function Contact() {
     return(
-        <>
+        <div className="medium-container">
             <h1>Contact</h1>
             <div className="contact-form-container">
                 <form action="">
@@ -17,6 +17,6 @@ export default function Contact() {
                     <button>Submit</button>
                 </form>
             </div>
-        </>
+        </div>
     )
 }

@@ -19,20 +19,51 @@ body {
   color: #ddddd5;
 }
 
-
 .page {
-  padding: 60px 60px;
-  width: 1000px;
-  max-width: 100%;
-  min-height: calc(100vh - 256px);
-  margin: auto;
-
+  width: 100%;
 }
 
-.page h1 {
+.page {
+  /* padding: 60px 60px; */
+  /* width: 1000px; */
+  /* max-width: 100%; */
+  min-height: calc(100vh - 256px);
+  /* margin: auto; */
+}
+
+/* .page h1 {
+  text-align: right;
+  margin-bottom: 2em;
+} */
+
+.medium-container {
+  width: 1000px;
+  max-width: 100%;
+  margin: auto;
+  padding: 60px 60px;
+  /* margin: auto; */
+}
+
+.medium-container h1 {
   text-align: right;
   margin-bottom: 2em;
 }
+
+.large-container {
+  width: 100vw;
+  padding: 60px 0px;
+}
+
+.large-container h1 {
+  width: 1000px;
+  max-width: 100%;
+  text-align: right;
+  margin: auto;
+  padding: 0px 60px;
+  margin-bottom: 2em;
+
+}
+
 
 
 /* .App {
