@@ -4,9 +4,9 @@ import './Home.css'
 export default function Home() {
     return (
         <>
-            <div className="home-video-container">
+            {/* <div className="home-video-container">
                 <video src=""></video>
-            </div>
+            </div> */}
 
             <div className="home-container large-container">
                 <div className="latest-single-container">
@@ -15,10 +15,8 @@ export default function Home() {
                 <div className="home-full-width-container">
                     <div className="home-full-width-inner-container">
                         <h2>Latest Visuals</h2>
-                        <h4>See all visuals</h4>
+                        <h4><a href="/visuals">See all visuals</a></h4>
                     </div>
-                    
-
                 </div>
                 <div className="home-full-width-container">
                     <div className="home-full-width-inner-container">
@@ -28,8 +26,7 @@ export default function Home() {
                 </div>
                 
                 <div className="instagram-feed-container">
-                    
-                    
+                     
                 </div>
             </div>
         </>

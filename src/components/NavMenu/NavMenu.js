@@ -41,7 +41,7 @@ export default function NavMenu() {
                     <li><NavLink to="/contact">Contact</NavLink></li>
                 </ul>
                 </div>
-                <div className="nav-menu-button hidden" onClick={(e) => toggleNav(e)}>
+                <div className="nav-menu-button" onClick={(e) => toggleNav(e)}>
                     <div className="bar top-bar" id="top-bar"></div>
                     <div className="bar bottom-bar" id="bottom-bar"></div>
                 </div>

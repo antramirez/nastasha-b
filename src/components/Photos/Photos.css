@@ -20,8 +20,8 @@
 }
 .photo-right-col {
     padding-left: 10px;
-
 }
+
 .photo-col img {
     width: 100%;
 
@@ -29,7 +29,18 @@
     margin-bottom: 18px;
 }
 
-
 .clear {
     clear: both;
+}
+
+@media screen and (max-width: 780px) {
+    .photo-col {
+        width: 100%;
+    }
+    .photo-left-col {
+        padding-right: 0px;
+    }
+    .photo-right-col {
+        padding-left: 0px;
+    }
 }

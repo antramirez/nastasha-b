@@ -1,8 +1,9 @@
 footer {
     height: 136px;
-    width: 100vw;
+    /* width: 100vw; */
     padding: 0px 60px;
     position: relative;
+    opacity: 1;
 } 
 
 footer .copyright-container {
