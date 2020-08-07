@@ -6,6 +6,7 @@ import './PressPage.css'
 export default function PressPage() {
     return(
     <div className="medium-container">
+        <div className="heading-bar"></div>
         <h1>Press</h1>
         <ul className="press-list">
             <li>

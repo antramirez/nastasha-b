@@ -28,3 +28,7 @@
     display: inline-block;
     line-height: 180px;;
 }
+
+.lyrics {
+    text-align: center;
+}

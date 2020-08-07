@@ -27,12 +27,13 @@ export default function Visuals() {
     })
     return(
         <div className="large-container">
+            <div className="heading-bar"></div>
             <h1>Visuals</h1>
             <div className="visuals-container">
-                <div className="home-full-width-container">
+            <div className="home-full-width-container">
                     <video id="specially-video" src={specially} muted loop></video>
                     <div className="home-full-width-inner-container">
-                        <h2>Specially</h2><div className="streaming-services-container">
+                        <h2>The Interlude</h2><div className="streaming-services-container">
                             <ul>
                                 <li><a href="#">Spotify</a></li>
                                 <li><a href="#">Apple Music</a></li>
@@ -49,7 +50,7 @@ export default function Visuals() {
                 <div className="home-full-width-container">
                     <video id="specially-video" src={about} muted loop></video>
                     <div className="home-full-width-inner-container">
-                        <h2>The Interlude</h2><div className="streaming-services-container">
+                        <h2>Specially</h2><div className="streaming-services-container">
                             <ul>
                                 <li><a href="#">Spotify</a></li>
                                 <li><a href="#">Apple Music</a></li>

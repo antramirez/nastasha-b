@@ -7,16 +7,18 @@
 }
 
 html {
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 100%;
   height: 100%;
+  background-color: #231f22;
 }
 
 body {
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   height: 100%;
   width: 100%;
-  background-color: #231f22;
+  background: linear-gradient(#231f22, #000000);
   color: #ddddd5;
 }
 
@@ -36,13 +38,15 @@ h1 {
 
 .page {
   width: 100%;
+  position: relative;
+  top: 90px;
 }
 
 .page {
   /* padding: 60px 60px; */
   /* width: 1000px; */
   /* max-width: 100%; */
-  min-height: calc(100vh - 256px);
+  min-height: calc(100vh - 170px);
   /* margin: auto; */
 }
 
@@ -51,11 +55,21 @@ h1 {
   margin-bottom: 2em;
 } */
 
+.heading-bar {
+    width: 80px;
+    height: 1px;
+    border: 1px solid #ddddd5;
+    position: absolute;
+    right: 60px;
+    top: 30px;
+}
+
 .medium-container {
-  width: 1000px;
+  width: 1600px;
   max-width: 100%;
   margin: auto;
   padding: 10px 60px;
+  position: relative;
   /* margin: auto; */
 }
 
@@ -65,12 +79,13 @@ h1 {
 }
 
 .large-container {
-  width: 100vw;
+  /* width: 100vw; */
+  width: 100%;
   padding: 10px 0px;
 }
 
 .large-container h1 {
-  width: 1000px;
+  width: 1600px;
   max-width: 100%;
   text-align: right;
   margin: auto;
@@ -84,6 +99,12 @@ a {
   color: #ddddd5;
 }
 
+
+@media screen and (max-width: 650px) {
+  .page {
+    min-height: calc(100vh - 190px);
+  }
+}
 
 
 /* .App {

@@ -9,7 +9,6 @@ import spotify from '../../Spotify-Logo.png'
 export default function Footer() {
     return(
         <footer className="footer">
-            <div className="copyright-container"><p>© 2020 by Management of Nastasha B.</p></div>
             <div className="social-icons-container">
                 <ul>
                     <li><a href="www.google.com"><img src={ig} alt="Instagram Logo"/></a></li>
@@ -18,6 +17,7 @@ export default function Footer() {
                     {/* <li><a href="www.google.com"><img src={appleMusic} alt="Apple Music Logo"/></a></li> */}
                 </ul>
             </div>
+            <div className="copyright-container"><p>© 2020 by Management of Nastasha B.</p></div>
         </footer>
     )
 }

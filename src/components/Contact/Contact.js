@@ -4,6 +4,7 @@ import './Contact.css'
 export default function Contact() {
     return(
         <div className="medium-container">
+            <div className="heading-bar"></div>
             <h1>Contact</h1>
             <div className="contact-form-container">
                 <form action="">

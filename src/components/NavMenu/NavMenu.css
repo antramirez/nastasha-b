@@ -1,11 +1,16 @@
 header {
-    height: 120px;
-    margin: auto;
-    /* width: 100vw; */
-    /* background-color: #231f22; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    /* margin: auto; */
+    background-color: rgba(0,0,0,.5);
     padding: 0px 60px;
     opacity: 1;
     transition: opacity .3s ease-in .2s;
+    margin-bottom: 25px;
+    z-index: 100;
 }
 
 /* .no-opacity {
@@ -20,7 +25,7 @@ nav {
 
 nav .logo-container {
     display: inline-block;
-    width: 80px;
+    width: 50px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -32,7 +37,7 @@ nav .logo-container a {
 
 nav .logo-container img {
     display: inline-block;
-    width: 80px;
+    /* width: 50px; */
     position: relative;
     filter: drop-shadow(0px 2px 13px #fff);
     /* box-shadow: 2px 2px 30px 5px rgb(0,0,0, .28); */

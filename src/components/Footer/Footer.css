@@ -1,46 +1,40 @@
 footer {
-    height: 136px;
+    height: 80px;
     /* width: 100vw; */
     padding: 0px 60px;
     position: relative;
     opacity: 1;
+    top: 90px;
 } 
 
 footer .copyright-container {
-    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    /* width: 40%;
     height: 100%;
-    display: inline-block;
+    display: inline-block; */
     /* position: relative;
     top: 50%;
     transform: translateY(-50%); */
 }
 
-footer .copyright-container p {
+footer .social-icons-container {
     position: absolute;
     top: 50%;
+    right: 60px;
     transform: translateY(-50%);
-}
-
-footer .social-icons-container {
-    width: 60%;
-    height: 100%;
-    display: inline-block;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    /* position: absolute;
-    top: 50%;
-    transform: translateY(-50%); */
-    /* right: 0px; */
     text-align: right;
 }
 
 footer .social-icons-container ul {
     list-style-type: none;
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     right: 0px;
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
+    padding-left: 0px;
 }
 
 footer .social-icons-container ul li {
@@ -50,4 +44,31 @@ footer .social-icons-container ul li {
 
 footer .social-icons-container ul li:last-of-type {
     margin-right: 0px;
+}
+
+
+@media screen and (max-width: 650px) {
+    footer {
+        height: 100px;
+        padding: 15px 0px;
+    }
+
+    footer .copyright-container {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        transform: translateY(0);
+    }
+
+    footer .social-icons-container {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translateY(0);
+    }
+
+    footer .social-icons-container ul {
+        text-align: center;
+    }
 }
