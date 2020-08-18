@@ -8,7 +8,7 @@ import spotify from '../../Spotify-Logo.png'
 
 export default function Footer() {
     return(
-        <footer className="footer">
+        <footer className="reg-footer">
             <div className="social-icons-container">
                 <ul>
                     <li><a href="www.google.com"><img src={ig} alt="Instagram Logo"/></a></li>

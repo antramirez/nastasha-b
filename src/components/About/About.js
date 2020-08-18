@@ -7,18 +7,25 @@ export default function About() {
     useEffect(() => {
         let time
         let start
+        let displayNone
         const header = document.querySelector('header')
         const footer = document.querySelector('footer')
         const aboutHeading = document.querySelector('.about-heading')
+
+        footer.classList.remove('reg-footer')
 
         const hideContent = () => {
             header.classList.add('hidden')
             footer.classList.add('hidden')
             aboutHeading.classList.add('hidden')
+            displayNone = setTimeout(() => {
+                header.style.display = 'none'
+            }, 400);
         }
         const resetTimer = () => {
             clearTimeout(time)
             header.classList.remove('hidden')
+            header.style.display = 'block'
             footer.classList.remove('hidden')
             aboutHeading.classList.remove('hidden')
             time = setTimeout(hideContent, 2500)
@@ -30,6 +37,8 @@ export default function About() {
         return function cleanup() {
             clearTimeout(time)
             clearTimeout(start)
+            clearTimeout(displayNone)
+            footer.classList.add('reg-footer')
             document.onmousemove = null;
         }
     })
@@ -42,9 +51,7 @@ export default function About() {
                 </video>
             </div>
 
-            {/* <div className="medium-container"> */}
-                <h1 className="about-heading">About</h1>
-            {/* </div> */}
+            <h1 className="about-heading">About</h1>
         </>
     )
 }
