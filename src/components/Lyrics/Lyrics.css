@@ -3,9 +3,14 @@
 }
 
 .lyrics-container .song-row {
-    height: 400px;
+    height: 450px;
     width: 100%;
     margin-bottom: 18px;
+    margin-top: 36px; 
+}
+
+.lyrics-container .song-row:first-of-type {
+    margin-top: 0px;
 }
 
 .song-col, .song-col {
@@ -13,7 +18,7 @@
     height: 100%;
     display: inline-block;
     padding:10px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 

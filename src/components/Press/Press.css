@@ -2,7 +2,6 @@
     display: block;
 }
 
-
 .press-container span {
     display: none;
 }
@@ -13,12 +12,18 @@
 }
 
 .press-container p::before {
-    content: '>';
+    content: url(./arrow.svg);
     text-decoration: none;
     display: inline-block;
     position: relative;
-    left: -12px;
-    top: -2px;
+    left: -8px;
+    top: -1px;
+    transition: all .3s ease-in-out .1s;
+}
+
+.press-container p.clicked::before {
+    top: 1px;
+    transform: rotate(90deg);
 }
 
 .press-container iframe {

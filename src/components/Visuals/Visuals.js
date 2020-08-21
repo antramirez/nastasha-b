@@ -8,11 +8,20 @@ export default function Visuals() {
 
     useEffect(() => {
         const vidContainers = document.querySelectorAll('.visuals-container .home-full-width-container')
+        let pauseTimeout
 
         vidContainers.forEach(v => {
             if (v.firstElementChild) {
-                v.addEventListener('mouseover', () => v.firstElementChild.play())
-                v.addEventListener('mouseleave', () => v.firstElementChild.pause())
+                v.addEventListener('mouseover', () => {
+                    v.firstElementChild.play()
+                    v.firstElementChild.classList.remove('blur')
+                    v.firstElementChild.classList.add('no-blur')
+                })
+                v.addEventListener('mouseleave', () => {
+                    v.firstElementChild.classList.remove('no-blur')
+                    v.firstElementChild.classList.add('blur')
+                    pauseTimeout = setTimeout(() => v.firstElementChild.pause(), 500)
+                })  
             }
         })
             
@@ -23,6 +32,7 @@ export default function Visuals() {
                     v.removeEventListener('mouseleave', () => v.firstElementChild.pause())
                 }
             })
+            clearTimeout(pauseTimeout)
         }
     })
     return(
@@ -34,7 +44,7 @@ export default function Visuals() {
             <div className="large-container">
                 <div className="visuals-container">
                 <div className="home-full-width-container">
-                        <video id="specially-video" src={specially} muted loop></video>
+                        <video className="blur" id="specially-video" src={specially} muted loop></video>
                         <div className="home-full-width-inner-container">
                             <h2>The Interlude</h2><div className="streaming-services-container">
                                 <ul>
@@ -51,7 +61,7 @@ export default function Visuals() {
                         </div>
                     </div>
                     <div className="home-full-width-container">
-                        <video id="specially-video" src={about} muted loop></video>
+                        <video className="blur" id="specially-video" src={about} muted loop></video>
                         <div className="home-full-width-inner-container">
                             <h2>Specially</h2><div className="streaming-services-container">
                                 <ul>

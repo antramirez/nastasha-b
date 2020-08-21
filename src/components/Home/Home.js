@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import Instagram from '../Instagram/Instagram'
 import './Home.css'
 import homeVid from './../../NastashaB_Viewing004_20200721.mp4'
 
@@ -58,8 +59,9 @@ export default function Home() {
                     </div>
                 </div>
                 
-                <div className="instagram-feed-container">
-                     
+                <div className="medium-container">
+                     <Instagram />
+                     <h4 id="ig-h4"><a href="https://instagram.com/nastasha.b">See more on Instagram</a></h4>
                 </div>
             </div>
         </>

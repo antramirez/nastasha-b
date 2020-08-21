@@ -29,6 +29,15 @@
     object-fit: cover;
 }
 
+.blur {
+    filter: blur(6px) !important;
+    transition: all .3s ease-in-out .2s;
+}
+.no-blur {
+    filter: blur(0px);
+    transition: all .3s ease-in-out .2s;
+}
+
 .streaming-services-container {
     position: absolute;
     bottom: 60px;
@@ -46,6 +55,23 @@
     text-align: right;
     transition: opacity .2s ease-in-out .2s;
 }
+
 .streaming-services-container ul li {
     margin-top: 10px;
+}
+
+.streaming-services-container ul li a {
+    display: inline-block;
+}
+.streaming-services-container ul li a::after {
+    content: '';
+    height: 1px;
+    width: 0;
+    display: block;
+    background-color: #ddddd5;
+    transition: width .3s ease-in;
+}
+
+.streaming-services-container ul li a:hover::after {
+    width: 100%;
 }

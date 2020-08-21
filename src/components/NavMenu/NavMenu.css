@@ -40,7 +40,11 @@ nav .logo-container img {
     /* width: 50px; */
     position: relative;
     filter: drop-shadow(0px 2px 13px #fff);
-    /* box-shadow: 2px 2px 30px 5px rgb(0,0,0, .28); */
+    opacity: .75;
+    transition: all .2s ease-in .1s;
+}
+nav .logo-container img:hover {
+    opacity: 1;
 }
 
 nav .nav-menu-container {
@@ -80,6 +84,19 @@ nav .nav-menu-container ul li a {
     text-decoration: none;
 }
 
+nav .nav-menu-container ul li a::after {
+    content: '';
+    height: 1px;
+    width: 0;
+    display: block;
+    background-color: #ddddd5;
+    transition: width .3s ease-in;
+}
+
+nav .nav-menu-container ul li a:hover::after {
+    width: 100%;;
+}
+
 nav .nav-menu-button {
     display: none;
     width: 30px;
@@ -101,24 +118,26 @@ nav .nav-menu-button {
 
 .top-bar {
     transition: all .2s ease-in-out .3s;
-    top: 0px;
+    top: 8px;
 }
 
 .bottom-bar {
-    top: 8px;
+    top: 16px;
     transition: all .2s ease-in-out .3s;
 }
 
 .top-bar-clicked {
     transform: rotate(-45deg);
-    top: 4px;
+    top: 12px;
     transition: all .2s ease-in-out .3s;
+    background-color: #000000;
 }
 
 .bottom-bar-clicked {
     transform: rotate(45deg);
-    top: 2px;
+    top: 10px;
     transition: all .2s ease-in-out .3s;
+    background-color: #000000;
 }
 
 .mobile-menu-visible {
@@ -151,18 +170,36 @@ nav .nav-menu-button {
     nav .nav-menu-container {
         height: 100vh;
         width: 860px;
-        max-width: 80%;
+        max-width: 75%;
         background-color: rgba(255, 255, 255, 0.9);
         position: fixed;
         right: -860px;
         z-index: 10;
-        transition: all .3s ease-in-out .2s;
+        transition: all .3s ease-in-out .3s;
         opacity: 0;
+    }
+
+    nav .nav-menu-container ul li {
+        width: auto;
     }
 
     nav .nav-menu-container ul li a {
         font-size: 36px;
         color: #231f22;
+        display: inline-block;
+    }
+
+    nav .nav-menu-container ul li a::after {
+        /* content: '';
+        height: 1px;
+        width: 0;
+        display: block; */
+        background-color: #000000;
+        /* transition: width .3s ease-in; */
+    }
+    
+    nav .nav-menu-container ul li a:hover::after {
+        width: 100%;
     }
 
     nav ul {
@@ -170,7 +207,7 @@ nav .nav-menu-button {
         /* display: none; */
         position: absolute;
         top: 50%;
-        left: calc(50% - 92px);
+        left: calc(50% - 50);
         transform: translate(-50%, -50%);
         margin: auto;
         text-align: center;
@@ -182,6 +219,7 @@ nav .nav-menu-button {
         display: block;
         margin:auto;
         padding: 10px 32px;
+        text-align: left;
     }
 
     nav ul li:first-of-type {

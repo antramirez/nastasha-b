@@ -7,8 +7,19 @@ export default function Press( {title="", link=""} ) {
 
     const clickHandler = (e) => {
         updateToggle(!toggle)
+
+        const arrow = document.querySelector('.press-container p')
+        
         const iframeContainer = e.target.nextElementSibling
-        toggle ? iframeContainer.classList.remove('hidden-iframe') : iframeContainer.classList.add('hidden-iframe')
+        if (toggle) {
+            arrow.classList.add('clicked')
+            iframeContainer.classList.remove('hidden-iframe')
+        }
+        else {
+            arrow.classList.remove('clicked')
+            iframeContainer.classList.add('hidden-iframe');
+        }
+        // toggle ? iframeContainer.classList.remove('hidden-iframe') : iframeContainer.classList.add('hidden-iframe');
     }
 
     return(
