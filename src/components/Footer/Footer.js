@@ -1,10 +1,9 @@
 import React from 'react'
 import './Footer.css'
-
-import ig from '../../Instagram-Logo.png'
-import apple from '../../Apple-Logo.png'
-import youtube from '../../YouTube-Logo.png'
-import spotify from '../../Spotify-Logo.png'
+import ig from './Instagram-Logo.svg'
+import apple from './Apple-Logo.svg'
+import youtube from './YouTube-Logo.svg'
+import spotify from './Spotify-Logo.svg'
 
 export default function Footer() {
     return(

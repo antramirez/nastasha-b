@@ -1,16 +1,20 @@
 import React, { useEffect } from 'react'
+import Bounce from 'react-reveal/Bounce';
 import './About.css'
 import aboutVideo from './../../NATBBIO1.mp4'
 
 export default function About() {
     
     useEffect(() => {
+        document.title = 'Nastasha B. | About'
+        // ${window.location.pathname.split('/')[1].toTitleCase()
+
         let time
         let start
         let displayNone
         const header = document.querySelector('header')
         const footer = document.querySelector('footer')
-        const aboutHeading = document.querySelector('.about-heading')
+        const aboutHeading = document.querySelector('.about-heading-container h1')
 
         footer.classList.remove('reg-footer')
 
@@ -24,14 +28,14 @@ export default function About() {
         }
         const resetTimer = () => {
             clearTimeout(time)
-            header.classList.remove('hidden')
             header.style.display = 'block'
+            header.classList.remove('hidden')
             footer.classList.remove('hidden')
             aboutHeading.classList.remove('hidden')
             time = setTimeout(hideContent, 2500)
         }
 
-        start = setTimeout(hideContent, 800)
+        start = setTimeout(hideContent, 1500)
         document.onmousemove = resetTimer;
         
         return function cleanup() {
@@ -50,8 +54,12 @@ export default function About() {
                     <source src={aboutVideo} type="video/mp4" />
                 </video>
             </div>
-
-            <h1 className="about-heading">About</h1>
+            <div className="about-heading-container">
+                <Bounce left>
+                    <h1>About</h1>
+                </Bounce>
+            </div>
+            
         </>
     )
 }

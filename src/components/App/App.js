@@ -11,8 +11,15 @@ import Visuals from '../Visuals/Visuals'
 import Lyrics from '../Lyrics/Lyrics'
 import PressPage from '../PressPage/PressPage'
 import Contact from '../Contact/Contact'
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    return () => {
+      document.cookie = 'viewedHome=false;expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+    }
+  })
+
   return (
     <BrowserRouter>
       <NavMenu></NavMenu>

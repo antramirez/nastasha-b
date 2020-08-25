@@ -9,6 +9,16 @@ export default function Home() {
     //TODO: hide content under video until 'enter site' is clicked
     
     useEffect( () => {
+        document.title = 'Nastasha B.'
+
+        if (document.cookie) {
+            if (document.cookie.split('=')[1]==='true') {
+                document.querySelector('.home-video-container').style.display = 'none'
+                body.classList.remove('no-scroll')
+                
+            }
+        }
+
         const gradualOpacity = setTimeout(() => {
             const enterSite = document.querySelector('.home-video-container h2')
             enterSite.style.opacity = 1;
@@ -20,6 +30,9 @@ export default function Home() {
     })
 
     const hideVideo = () => {
+        document.cookie = 'viewedHome=true'
+        const enterSite = document.querySelector('.home-video-container h2')
+        enterSite.classList.add('fullScreen')
         // const video = document.querySelector('video')
         // video.pause()
         const vidContainer = document.querySelector('.home-video-container')
@@ -61,7 +74,10 @@ export default function Home() {
                 
                 <div className="medium-container">
                      <Instagram />
-                     <h4 id="ig-h4"><a href="https://instagram.com/nastasha.b">See more on Instagram</a></h4>
+                     <div id="ig-link-container">
+                        <h4><a href="https://instagram.com/nastasha.b">See more on Instagram</a></h4>
+
+                     </div>
                 </div>
             </div>
         </>

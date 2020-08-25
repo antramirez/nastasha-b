@@ -6,9 +6,9 @@ header {
     height: 90px;
     /* margin: auto; */
     background-color: rgba(0,0,0,.5);
-    padding: 0px 60px;
+    padding: 0px 40px;
     opacity: 1;
-    transition: opacity .3s ease-in .2s;
+    transition: opacity .3s ease-in-out .2s;
     margin-bottom: 25px;
     z-index: 100;
 }
@@ -26,6 +26,7 @@ nav {
 nav .logo-container {
     display: inline-block;
     width: 50px;
+    height: 47px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -37,7 +38,8 @@ nav .logo-container a {
 
 nav .logo-container img {
     display: inline-block;
-    /* width: 50px; */
+    width: 50px;
+    height: 47px;
     position: relative;
     filter: drop-shadow(0px 2px 13px #fff);
     opacity: .75;
@@ -54,6 +56,7 @@ nav .nav-menu-container {
     right: 0px;
     top: 50%;
     transform: translateY(-50%);
+    opacity: 1;
 }
 
 nav  ul {
@@ -94,7 +97,7 @@ nav .nav-menu-container ul li a::after {
 }
 
 nav .nav-menu-container ul li a:hover::after {
-    width: 100%;;
+    width: 100%;
 }
 
 nav .nav-menu-button {
@@ -140,13 +143,19 @@ nav .nav-menu-button {
     background-color: #000000;
 }
 
+/* .mobile-menu {
+    right: -860px !important;
+    opacity: 0;
+    transition: all .3s ease-in-out .2s;
+} */
+
 .mobile-menu-visible {
-    right:0 !important;
+    right: 0 !important;
     opacity: 1 !important;
     transition: all .3s ease-in-out .2s;
 }
 
-.nav-menu-mobile-container {
+/* .nav-menu-mobile-container {
     height: 100vh;
     width: 860px;
     max-width: 80%;
@@ -163,7 +172,7 @@ nav .nav-menu-button {
 
 .nav-menu-mobile-container ul li {
     display: block;
-}
+} */
 
 @media screen and (max-width: 900px) {
 
@@ -171,12 +180,12 @@ nav .nav-menu-button {
         height: 100vh;
         width: 860px;
         max-width: 75%;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(221, 221, 213, 0.9);
         position: fixed;
         right: -860px;
         z-index: 10;
-        transition: all .3s ease-in-out .3s;
-        opacity: 0;
+        /* transition: all .3s ease-in-out .3s; */
+        /* opacity: 0; */
     }
 
     nav .nav-menu-container ul li {

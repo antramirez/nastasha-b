@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Bounce from 'react-reveal/Bounce';
 import './Lyrics.css'
 
 export default function Lyrics() {
+    useEffect(() => {
+        document.title = 'Nastasha B. | Lyrics'
+    })
+    
     return(
         <div className="medium-container">
-            <div className="heading-bar"></div>
-            <h1>Lyrics</h1>
+            {/* <div className="heading-bar"></div> */}
+            <Bounce right>
+                <h1>Lyrics</h1>
+            </Bounce>
             <div className="lyrics-container">
                 <div className="song-row">
                     <div className="song-col song-title-container">

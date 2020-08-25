@@ -1,7 +1,7 @@
 footer {
     height: 80px;
     /* width: 100vw; */
-    padding: 0px 60px;
+    padding: 0px 40px;
     position: relative;
     opacity: 1;
     top: 90px;
@@ -14,8 +14,9 @@ footer {
 footer .copyright-container {
     position: absolute;
     top: 50%;
-    left: 60px;
+    left: 40px;
     transform: translateY(-50%);
+    opacity: .6;
     /* width: 40%;
     height: 100%;
     display: inline-block; */
@@ -27,7 +28,7 @@ footer .copyright-container {
 footer .social-icons-container {
     position: absolute;
     top: 50%;
-    right: 60px;
+    right: 40px;
     transform: translateY(-50%);
     text-align: right;
 }
@@ -48,6 +49,16 @@ footer .social-icons-container ul li {
 
 footer .social-icons-container ul li:last-of-type {
     margin-right: 0px;
+}
+
+footer .social-icons-container img {
+    height: 20px;
+    opacity: .6;
+    transition: all .2s ease-in-out .1s;
+}
+
+footer .social-icons-container a:hover img {
+    opacity: 1;
 }
 
 

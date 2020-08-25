@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
+import Bounce from 'react-reveal/Bounce';
 import './Visuals.css'
 import specially from './../../Specially.MP4'
 import about from './../../NATBBIO1.mp4'
 
 export default function Visuals() {
-
-
     useEffect(() => {
+        document.title = 'Nastasha B. | Visuals'
         const vidContainers = document.querySelectorAll('.visuals-container .home-full-width-container')
         let pauseTimeout
 
@@ -38,8 +38,10 @@ export default function Visuals() {
     return(
         <>
             <div className="medium-container">
-                <div className="heading-bar"></div>
-                <h1>Visuals</h1>
+                {/* <div className="heading-bar"></div> */}
+                <Bounce right>
+                    <h1>Visuals</h1>
+                </Bounce>
             </div>
             <div className="large-container">
                 <div className="visuals-container">

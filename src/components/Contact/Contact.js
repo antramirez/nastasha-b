@@ -1,9 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Contact.css'
+import Bounce from 'react-reveal/Bounce';
 import axios from 'axios'
 
 export default function Contact() {
 
+  useEffect(() => {
+    document.title = 'Nastasha B. | Contact'
+
+    // const header = document.querySelector('.medium-container h1')
+    // header.classList.add('visible-header')
+    // console.log(header)
+  })
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [subject, setSubject] = useState('')
@@ -49,8 +57,10 @@ export default function Contact() {
 
     return(
         <div className="medium-container">
-            <div className="heading-bar"></div>
-            <h1>Contact</h1>
+            {/* <div className="heading-bar"></div> */}
+            <Bounce right>
+              <h1>Contact</h1>
+            </Bounce>
             <div className="contact-form-container">
                 <form onSubmit={handleSubmit.bind(this)} method="POST">
                     <div id="name-container"><label htmlFor="name">Name</label>
