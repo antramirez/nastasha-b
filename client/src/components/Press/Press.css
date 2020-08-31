@@ -2,13 +2,11 @@
     display: block;
 }
 
-.press-container span {
-    display: none;
-}
 
 .press-container p {
     cursor: pointer;
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    display: inline-block;
 }
 
 .press-container p::before {
@@ -17,13 +15,28 @@
     display: inline-block;
     position: relative;
     left: -8px;
-    top: -1px;
+    /* top: -1px; */
     transition: all .3s ease-in-out .1s;
 }
 
 .press-container p.clicked::before {
-    top: 1px;
+    /* top: 1px; */
     transform: rotate(90deg);
+}
+
+.press-container p::after {
+    content: '';
+    height: 1px;
+    width: 0;
+    display: block;
+    position: relative;
+    left: 9px;
+    background-color: #ddddd5;
+    transition: width .3s ease-in;
+}
+
+.press-container p:hover::after, .press-container p.clicked::after {
+    width: calc(100% - 9px);
 }
 
 .press-container iframe {

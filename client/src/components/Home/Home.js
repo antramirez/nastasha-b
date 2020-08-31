@@ -31,8 +31,8 @@ export default function Home() {
 
     const hideVideo = () => {
         document.cookie = 'viewedHome=true'
-        const enterSite = document.querySelector('.home-video-container h2')
-        enterSite.classList.add('fullScreen')
+        // const enterSite = document.querySelector('.home-video-container h2')
+        // enterSite.classList.add('fullScreen')
         // const video = document.querySelector('video')
         // video.pause()
         const vidContainer = document.querySelector('.home-video-container')
@@ -48,7 +48,7 @@ export default function Home() {
     return (
         <>
             <div className="home-video-container">
-                <video autoPlay loop muted>
+                <video autoPlay loop muted playsInline>
                     <source src={homeVid} type="video/mp4" />
                 </video>
                 <h2 onClick = { () => {

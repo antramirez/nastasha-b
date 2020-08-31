@@ -46,7 +46,7 @@ export default function Visuals() {
             <div className="large-container">
                 <div className="visuals-container">
                 <div className="home-full-width-container">
-                        <video className="blur" id="specially-video" src={specially} muted loop></video>
+                        <video className="blur" id="specially-video" src={specially} muted loop playsInline></video>
                         <div className="home-full-width-inner-container">
                             <h2>The Interlude</h2><div className="streaming-services-container">
                                 <ul>
@@ -63,7 +63,7 @@ export default function Visuals() {
                         </div>
                     </div>
                     <div className="home-full-width-container">
-                        <video className="blur" id="specially-video" src={about} muted loop></video>
+                        <video className="blur" id="specially-video" src={about} muted loop playsInline></video>
                         <div className="home-full-width-inner-container">
                             <h2>Specially</h2><div className="streaming-services-container">
                                 <ul>

@@ -11,6 +11,7 @@ import Visuals from '../Visuals/Visuals'
 import Lyrics from '../Lyrics/Lyrics'
 import PressPage from '../PressPage/PressPage'
 import Contact from '../Contact/Contact'
+import FourZeroFour from '../FourZeroFour/FourZeroFour'
 import { useEffect } from 'react';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Route exact path="/lyrics" component={Lyrics} />
           <Route exact path="/press" component={PressPage} />
           <Route exact path="/contact" component={Contact} />
+          <Route component={FourZeroFour} />
           {/* </div> */}
           
 

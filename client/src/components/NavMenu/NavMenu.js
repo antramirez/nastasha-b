@@ -36,6 +36,7 @@ export default function NavMenu() {
             hideMenu(navButtonTop, navButtonBottom, navMenuContainer)
         }
         updateToggle(!toggle)
+
     }
 
     const hideMenu = (topButton, bottomButton, menuContainer) => {
@@ -66,20 +67,28 @@ export default function NavMenu() {
         // transitionTimer(c)
     }
 
+    const scrollToTop = (e, homeLinkClicked=false) => {
+        // scroll to top if link is clicked that doesn't correspond to current page
+        if (homeLinkClicked || window.location.pathname.toLowerCase() !== `/${e.target.text.toLowerCase()}`) {
+            window.scrollTo(0,0)
+        }
+        
+    }
+
     return(
         <header>
             <nav>
                 <div className="logo-container">
-                    <NavLink to="/"><img src={logo} alt="N.B." /></NavLink>
+                    <NavLink to="/" onClick={(e) => scrollToTop(e, true)}><img src={logo} alt="N.B." /></NavLink>
                 </div>
                 <div className="nav-menu-container">
                 <ul>
-                    <li><NavLink to="/about" onClick={(e) => toggleNav(e)}>About</NavLink></li>
-                    <li><NavLink to="/visuals" onClick={(e) => toggleNav(e)}>Visuals</NavLink></li>
-                    <li><NavLink to="/photos" onClick={(e) => toggleNav(e)}>Photos</NavLink></li>
-                    <li><NavLink to="/lyrics" onClick={(e) => toggleNav(e)}>Lyrics</NavLink></li>
-                    <li><NavLink to="/press" onClick={(e) => toggleNav(e)}>Press</NavLink></li>
-                    <li><NavLink to="/contact" onClick={(e) => toggleNav(e)}>Contact</NavLink></li>
+                    <li><NavLink to="/about" onClick={(e) => {toggleNav(e); scrollToTop(e)}}>About</NavLink></li>
+                    <li><NavLink to="/visuals" onClick={(e) => {toggleNav(e); scrollToTop(e)}}>Visuals</NavLink></li>
+                    <li><NavLink to="/photos" onClick={(e) => {toggleNav(e); scrollToTop(e)}}>Photos</NavLink></li>
+                    <li><NavLink to="/lyrics" onClick={(e) => {toggleNav(e); scrollToTop(e)}}>Lyrics</NavLink></li>
+                    <li><NavLink to="/press" onClick={(e) => {toggleNav(e); scrollToTop(e)}}>Press</NavLink></li>
+                    <li><NavLink to="/contact" onClick={(e) => {toggleNav(e); scrollToTop(e)}}>Contact</NavLink></li>
                 </ul>
                 </div>
                 <div className="nav-menu-button" onClick={(e) => toggleNav(e)}>

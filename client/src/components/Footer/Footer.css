@@ -61,6 +61,19 @@ footer .social-icons-container a:hover img {
     opacity: 1;
 }
 
+@media screen and (max-width: 900px) {
+    footer {
+        padding: 0px 20px;
+    }
+
+    footer .social-icons-container {
+        right: 20px;
+    }
+
+    footer .copyright-container {
+        left: 20px;
+    }
+}
 
 @media screen and (max-width: 650px) {
     footer {
