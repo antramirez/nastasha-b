@@ -1,28 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './Press.css'
 
 export default function Press( {title="", link=""} ) {
-    const [toggle, updateToggle] = useState(true)
+    const [toggle, updateToggle] = useState(false)
+    const pressElement = useRef(null)
 
-    const clickHandler = (e) => {
-        updateToggle(!toggle)
+    useEffect(() => {
+        let iFrameTimeout
+        pressElement.current.classList.toggle('clicked', toggle)
+        iFrameTimeout = setTimeout(() => {
+            pressElement.current.nextElementSibling.classList.toggle('hidden-iframe', !toggle)
+        }, 350)
 
-        const pressTitle = e.target
-        const iframeContainer = e.target.nextElementSibling
-
-        if (toggle) {
-            pressTitle.classList.add('clicked')
-            iframeContainer.classList.remove('hidden-iframe')
+        return () => {
+            clearTimeout(iFrameTimeout)
         }
-        else {
-            pressTitle.classList.remove('clicked')
-            iframeContainer.classList.add('hidden-iframe');
-        }
-    }
+    }, [toggle])
 
     return(
         <div className="press-container">
-            <p onClick={(e) => clickHandler(e)}>{title}</p>
+            <p ref={pressElement} onClick={() => updateToggle(!toggle)}>{title}</p>
             {link}
         </div>
     )

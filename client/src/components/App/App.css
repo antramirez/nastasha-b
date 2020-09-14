@@ -13,22 +13,43 @@ html {
   background-color: #231f22;
 }
 
+@font-face {
+  font-family: North Carossela;
+  src: url(../../North\ Carossela.otf)
+}
+
+@font-face {
+  font-family: Cherione;
+  src: url(../../Cherione-Normal.otf)
+}
+
 body {
   overflow-y: auto;
   overflow-x: hidden;
   height: 100%;
   width: 100%;
-  background: linear-gradient(#231f22, #000000);
+  background: linear-gradient(#140b06, #020202);
   color: #ddddd5;
 }
 
 p, h2, h4, a, label {
-  font-family: 'Red Rose', cursive;
+  font-family: North Carossela, cursive;
+}
+
+label {
+  font-weight: 700;
 }
 
 h1 {
-  font-family: 'Funkford', cursive;
-  font-size: 72px;
+  font-family: Cherione, cursive;
+  font-size: 40px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.3em;
 }
 
 .hidden {
@@ -52,7 +73,7 @@ h1 {
   /* max-width: 100%; */
   min-height: calc(100vh - 170px);
   /* margin: auto; */
-  background: linear-gradient(#231f22, #000000);
+  background: linear-gradient(#140b06, #020202);
 
 }
 

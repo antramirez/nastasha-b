@@ -91,6 +91,8 @@ nav .nav-menu-container ul li a::after {
     content: '';
     height: 1px;
     width: 0;
+    position: relative;
+    /* top: -1px; */
     display: block;
     background-color: #ddddd5;
     transition: width .3s ease-in;

@@ -20,7 +20,7 @@ export default function Contact() {
     // toggleInputError(event)
   }
   const onEmailChange = (event) => {
-    setEmail({email: event.target.value, valid: RegExp(/^[A-Za-z0-9.!#$%&*+=?^_‘{}|~-]+@[A-Za-z0-9._-]+\.[A-Za-z]{2,}$/).test(event.target.value)})
+    setEmail({email: event.target.value, valid: RegExp(/^[A-Za-z0-9.!#$%&*+=?^_‘{}|~-]+@[A-Za-z0-9]+([._-]{0,1}[A-Za-z0-9])+(\.{1}[A-Za-z]{2,})$/).test(event.target.value)})
     // toggleEmailError(event)
   }
   const onSubjectChange = (event) => {

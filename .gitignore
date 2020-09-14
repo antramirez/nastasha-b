@@ -26,3 +26,7 @@ yarn-error.log*
 
 # assets
 *.mp4
+*.otf
+*.jpeg
+*.jpg
+*.png
