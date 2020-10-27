@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import FullScreenVideo from '../FullScreenVideo/FullScreenVideo'
 import Instagram from '../Instagram/Instagram'
 import './Home.css'
 import homeVid from './../../NastashaB_Viewing004_20200721.mp4'
-import latestVisual from './Latest-Single.PNG'
-import latestPhoto from './IMG_0153.jpeg'
+import visualsGif from './Visuals.gif'
 
 export default function Home() {
     const [viewedVid, setViewedVid] = useState(false)
@@ -57,9 +57,8 @@ export default function Home() {
     return (
         <>
             <div className="home-video-container">
-                <video autoPlay loop muted playsInline autobuffer>
-                    <source src={homeVid} type="video/mp4" />
-                </video>
+                <FullScreenVideo vidSrc={homeVid}/>
+
                 <h2 onClick = { () => {
                     setViewedVid(true)}}>Enter site</h2>
             </div>
@@ -68,24 +67,20 @@ export default function Home() {
                 <div className="latest-single-container">
                     <h2>Latest Single Out</h2>
                 </div>
-                <div className="home-full-width-container">
-                    <div className="home-full-width-inner-container" style={{backgroundImage:`url(${latestVisual})`, backgroundSize:'cover'}}>
-                        <h2>Latest Visuals</h2>
-                        <h4><a href="/visuals">See all visuals</a></h4>
-                    </div>
-                </div>
-                <div className="home-full-width-container" style={{marginBottom:'50px'}}>
-                    <div className="home-full-width-inner-container" style={{backgroundImage:`url(${latestPhoto})`, backgroundSize:'cover'}}>
-                        <h2>Photos</h2>
-                        <h4><a href="/photos">See all photos</a></h4>
-                    </div>
-                </div>
-                <div className="medium-container">
-                     <Instagram />
-                     <div id="ig-link-container">
-                        <h4><a href="https://instagram.com/nastasha.b">See more on Instagram</a></h4>
 
-                     </div>
+                <div className="medium-container home-latest-see-more">
+                    <h2>Latest Visuals</h2>
+                    <div className="latest-vis-container" id="latest-vis-container">
+                        <img src={visualsGif} alt=""/>
+                        <h3><a href="https://www.youtube.com" target="_blank">Watch Now</a></h3>
+                    </div>
+                    <h4><a href="/visuals">See all visuals</a></h4>
+                </div>
+
+                <div className="medium-container home-latest-see-more">
+                    <h2>Latest Photos</h2>
+                    <Instagram />
+                    <h4><a href="/photos">See all photos</a></h4>
                 </div>
             </div>
         </>

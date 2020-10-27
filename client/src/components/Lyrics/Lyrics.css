@@ -1,39 +1,174 @@
 .lyrics-container {
+    width: 100%
+}
+
+.lyrics-single-container {
+    max-width: 900px;
+    padding: 40px;
+    position: relative;
+    text-shadow: 8px 8px 24px #000000;
+}
+
+.lyrics-single-container::before {
+    content: '';
+    background-size: cover;
+    opacity: .3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-}
-
-.lyrics-container .song-row {
-    height: 450px;
-    width: 100%;
-    margin-bottom: 18px;
-    margin-top: 36px; 
-}
-
-.lyrics-container .song-row:first-of-type {
-    margin-top: 0px;
-}
-
-.song-col, .song-col {
-    width: 50%;
-    height: 100%;
-    display: inline-block;
-    padding:10px;
-    overflow: auto;
-}
-
-
-.song-title-container {
-    text-align: center;
+    z-index: 1;
 }
 
 .song-title {
-    line-height: 300px;
-    font-size: 144px;
-    vertical-align: middle;
-    display: inline-block;
-    line-height: 180px;;
+    position: relative;
+}
+
+.song-title h2 {
+    font-size: 96px;
+    text-align: center;
+    margin-top: 20px;
+    z-index: 2;
+    position: relative;
 }
 
 .lyrics {
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.lyrics > div {
+    padding: 20px;
+}
+
+#song-1 {
+    float: left;
+    clear: left;
+}
+
+#song-2 {
+    float: right;
+    clear: right;
+}
+
+.clear {
+    clear: both;
+}
+
+@media screen and (min-width: 660px) {
+    #song-1::before {
+        background-image: url('./Interlude-lyrics.jpeg');
+    }
+    
+    #song-2::before {
+        background-image: url('./Specially-lyrics.jpeg');
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .lyrics-single-container {
+        padding: 40px 20px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .lyrics-single-container {
+        padding: 40px 15px;
+    }
+}
+
+@media screen and (max-width: 901px) {
+    .lyrics-single-container {
+        padding: 40px 10px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .song-title h2{
+        padding-left: 20px;
+    }
+
+    .lyrics > div {
+        padding: 20px;
+        flex: 1 1 650px;
+    }
+
+    #song-1 {
+        float: none;
+        clear:both;
+    }
+
+    #song-2 {
+        top: 0px !important;
+        float: none;
+        clear:both;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .song-title {
+        width: 100% !important;
+        height: 250px;
+        padding: 0px;
+    }
+
+    .song-title h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0px;
+        margin-top: 0px;
+        font-size: 78px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .song-title::before {
+        content: '';
+        background-size: cover;
+        opacity: .3;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    #song-1 .song-title::before {
+        background-image: url('./Interlude-lyrics.jpeg');
+    }
+
+    #song-2 .song-title {
+        background-image: url('./Specially-lyrics.jpeg');
+    }
+   
+    .lyrics {
+        margin-top: 0px;
+    } 
+}
+
+@media screen and (max-width: 600px) {
+    .lyrics-single-container {
+        padding: 20px 0px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .song-title h2 {
+        font-size: 72px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .song-title h2 {
+        font-size: 56px;
+    }
 }

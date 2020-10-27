@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import FullScreenVideo from '../FullScreenVideo/FullScreenVideo'
 import Bounce from 'react-reveal/Bounce';
 import './About.css'
 import aboutVideo from './../../NATBBIO1.mp4'
@@ -22,6 +23,7 @@ export default function About() {
             header.classList.add('hidden')
             footer.classList.add('hidden')
             aboutHeading.classList.add('hidden')
+            aboutHeading.style.display = 'none'
             displayNone = setTimeout(() => {
                 header.style.display = 'none'
             }, 400);
@@ -32,13 +34,14 @@ export default function About() {
             header.classList.remove('hidden')
             footer.classList.remove('hidden')
             aboutHeading.classList.remove('hidden')
+            aboutHeading.style.display = 'block'
             time = setTimeout(hideContent, 2500)
         }
 
         start = setTimeout(hideContent, 1500)
         document.onmousemove = resetTimer;
         
-        return function cleanup() {
+        return () => {
             clearTimeout(time)
             clearTimeout(start)
             clearTimeout(displayNone)
@@ -50,16 +53,13 @@ export default function About() {
     return(
         <>
             <div className="about-video-container">
-                <video autoPlay loop muted playsInline>
-                    <source src={aboutVideo} type="video/mp4" />
-                </video>
+                <FullScreenVideo vidSrc={aboutVideo} />
             </div>
             <div className="about-heading-container">
                 <Bounce left>
                     <h1>About</h1>
                 </Bounce>
-            </div>
-            
+            </div>  
         </>
     )
 }

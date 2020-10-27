@@ -7,10 +7,7 @@
 .msg-container {
     font-family: North Carossela;
     margin-top: 40px;
-    /* padding: 12px; */
-    /* border: 1px solid #ddddd5; */
     text-align: center;
-    /* display: none; */
     opacity: 0;
     transition: opacity .3s ease-in;
 }
@@ -21,14 +18,12 @@ form {
 
 form .input-field-container {
     position: relative;
-    height: 70px;
-    /* margin-bottom: 16px; */
+    height: 80px;
 }
 
 form label {
     font-size: 18px;
     display: inline-block;
-    /* padding-left: 8px; */
     margin-bottom: 2px;
 }
 
@@ -43,8 +38,8 @@ form .required-field {
 form input {
     width: 100%;
     margin-bottom: 16px;
-    height: 28px;
-    font-size: 14px;
+    height: 36px;
+    font-size: 18px;
     font-family: North Carossela;
     /* border-radius: 25px; */
     /* border: none; */
@@ -63,10 +58,9 @@ form #message-container {
 
 form textarea {
     width: 100%;
-    height: 160px;
-    font-size: 14px;
+    height: 158px;
+    font-size: 18px;
     font-family: North Carossela;
-    /* border-radius: 25px; */
     border: 1px solid #ddddd5;
     color: #ddddd5;
     background-color: transparent;
@@ -76,7 +70,7 @@ form textarea {
 
 form .error-container {
     position: absolute;
-    bottom: 6px;
+    bottom: 10px;
     left: 0;
     font-size: 10px;
     color: #ff1105;
@@ -110,9 +104,3 @@ form button:disabled {
     color: #231f22;
     cursor: default;
 }
-/* 
-form button:disabled:hover {
-    border-color: #231f22;
-    color: #231f22;
-    cursor: default;
-} */

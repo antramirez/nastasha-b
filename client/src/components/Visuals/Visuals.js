@@ -1,39 +1,14 @@
 import React, { useEffect } from 'react'
+import Visual from '../Visual/Visual'
 import Bounce from 'react-reveal/Bounce';
-import './Visuals.css'
 import specially from './../../Specially.MP4'
 import about from './../../NATBBIO1.mp4'
+import interludeGif from './Interlude.gif'
+import speciallyGif from './Specially.gif'
 
 export default function Visuals() {
     useEffect(() => {
         document.title = 'Nastasha B. | Visuals'
-        const vidContainers = document.querySelectorAll('.visuals-container .home-full-width-container')
-        let pauseTimeout
-
-        vidContainers.forEach(v => {
-            if (v.firstElementChild) {
-                v.addEventListener('mouseover', () => {
-                    v.firstElementChild.play()
-                    v.firstElementChild.classList.remove('blur')
-                    v.firstElementChild.classList.add('no-blur')
-                })
-                v.addEventListener('mouseleave', () => {
-                    v.firstElementChild.classList.remove('no-blur')
-                    v.firstElementChild.classList.add('blur')
-                    pauseTimeout = setTimeout(() => v.firstElementChild.pause(), 500)
-                })  
-            }
-        })
-            
-        return () => {
-            vidContainers.forEach(v => {
-                if (v.firstElementChild) {
-                    v.removeEventListener('mouseover', () => v.firstElementChild.play())
-                    v.removeEventListener('mouseleave', () => v.firstElementChild.pause())
-                }
-            })
-            clearTimeout(pauseTimeout)
-        }
     })
     return(
         <>
@@ -44,46 +19,9 @@ export default function Visuals() {
             </div> */}
             <div className="large-container">
                 <div className="visuals-container">
-                <div className="home-full-width-container">
-                        <video className="blur" id="specially-video" src={about} muted loop playsInline></video>
-                        <div className="home-full-width-inner-container">
-                            <h2>The Interlude</h2><div className="streaming-services-container">
-                                <ul>
-                                    <li><a href="#">Spotify</a></li>
-                                    <li><a href="#">Apple Music</a></li>
-                                    <li><a href="#">YouTube</a></li>
-                                    <li><a href="#">YouTube Music</a></li>
-                                    <li><a href="#">SoundCloud</a></li>
-                                    <li><a href="#">Tidal</a></li>
-                                    <li><a href="#">Amazon</a></li>
-                                    <li><a href="#">Deezer</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="home-full-width-container">
-                        <video className="blur" id="specially-video" src={specially} muted loop playsInline></video>
-                        <div className="home-full-width-inner-container">
-                            <h2>Specially</h2><div className="streaming-services-container">
-                                <ul>
-                                    <li><a href="#">Spotify</a></li>
-                                    <li><a href="#">Apple Music</a></li>
-                                    <li><a href="#">YouTube</a></li>
-                                    <li><a href="#">YouTube Music</a></li>
-                                    <li><a href="#">SoundCloud</a></li>
-                                    <li><a href="#">Tidal</a></li>
-                                    <li><a href="#">Amazon</a></li>
-                                    <li><a href="#">Deezer</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="home-full-width-container">
-                        <video src=""></video>
-                        <div className="home-full-width-inner-container">
-                            <h2>Behind the Scenes</h2>
-                        </div>
-                    </div>
+                    <Visual title={'The Interlude'} visSrc={about} gifSrc={interludeGif} spotify={'#'} apple={'#'} youtube={'#'} youtubeMusic={'#'} soundcloud={'#'} tidal={'#'} amazon={'#'} deezer={'#'}/>
+                    <Visual title={'Specially'} visSrc={specially} gifSrc={speciallyGif} spotify={'#'} apple={'#'} youtube={'#'} youtubeMusic={'#'} soundcloud={'#'} tidal={'#'} amazon={'#'} deezer={'#'}/>
+                    <Visual title={'Behind the Scenes'} hasLinks={false} />
                 </div>
             </div>
         </>
