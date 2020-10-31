@@ -1,12 +1,17 @@
 import React, { useEffect } from 'react'
 import Visual from '../Visual/Visual'
 import Bounce from 'react-reveal/Bounce';
+import Fade from 'react-reveal/Fade';
+import { useInView } from 'react-intersection-observer';
 import specially from './../../Specially.MP4'
 import about from './../../NATBBIO1.mp4'
 import interludeGif from './Interlude.gif'
 import speciallyGif from './Specially.gif'
 
 export default function Visuals() {
+    const [ref, inView] = useInView({ rootMargin: '-50px' });
+
+
     useEffect(() => {
         document.title = 'Nastasha B. | Visuals'
     })
@@ -18,10 +23,10 @@ export default function Visuals() {
                 </Bounce>
             </div> */}
             <div className="large-container">
-                <div className="visuals-container">
-                    <Visual title={'The Interlude'} visSrc={about} gifSrc={interludeGif} spotify={'#'} apple={'#'} youtube={'#'} youtubeMusic={'#'} soundcloud={'#'} tidal={'#'} amazon={'#'} deezer={'#'}/>
-                    <Visual title={'Specially'} visSrc={specially} gifSrc={speciallyGif} spotify={'#'} apple={'#'} youtube={'#'} youtubeMusic={'#'} soundcloud={'#'} tidal={'#'} amazon={'#'} deezer={'#'}/>
-                    <Visual title={'Behind the Scenes'} hasLinks={false} />
+                <div ref={ref} className="visuals-container">
+                    <Fade when={inView}><Visual title={'The Interlude'} visSrc={about} gifSrc={interludeGif} spotify={'#'} apple={'#'} youtube={'#'} youtubeMusic={'#'} soundcloud={'#'} tidal={'#'} amazon={'#'} deezer={'#'}/></Fade>
+                    <Fade bottom when={inView}><Visual title={'Specially'} visSrc={specially} gifSrc={speciallyGif} spotify={'#'} apple={'#'} youtube={'#'} youtubeMusic={'#'} soundcloud={'#'} tidal={'#'} amazon={'#'} deezer={'#'}/></Fade>
+                    <Fade bottom when={inView}><Visual title={'Behind the Scenes'} hasLinks={false} /></Fade>
                 </div>
             </div>
         </>

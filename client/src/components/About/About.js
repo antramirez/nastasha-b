@@ -20,9 +20,9 @@ export default function About() {
         footer.classList.remove('reg-footer')
 
         const hideContent = () => {
-            header.classList.add('hidden')
-            footer.classList.add('hidden')
-            aboutHeading.classList.add('hidden')
+            header.classList.add('hidden-transition')
+            footer.classList.add('hidden-transition')
+            aboutHeading.classList.add('hidden-transition')
             aboutHeading.style.display = 'none'
             displayNone = setTimeout(() => {
                 header.style.display = 'none'
@@ -31,9 +31,9 @@ export default function About() {
         const resetTimer = () => {
             clearTimeout(time)
             header.style.display = 'block'
-            header.classList.remove('hidden')
-            footer.classList.remove('hidden')
-            aboutHeading.classList.remove('hidden')
+            header.classList.remove('hidden-transition')
+            footer.classList.remove('hidden-transition')
+            aboutHeading.classList.remove('hidden-transition')
             aboutHeading.style.display = 'block'
             time = setTimeout(hideContent, 2500)
         }

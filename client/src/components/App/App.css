@@ -52,9 +52,23 @@ p {
   line-height: 1.3em;
 }
 
+.no-display {
+  display: none;
+}
+
 .hidden {
   opacity: 0 !important;
+  /* transition: opacity .3s ease-in-out .2s; */
+}
+
+.hidden-transition {
+  opacity: 0 !important;
   transition: opacity .3s ease-in-out .2s;
+}
+
+.opaque-transition {
+  opacity: 1 !important;
+  transition: opacity .8s ease-in-out .2s;
 }
 
 .no-scroll {

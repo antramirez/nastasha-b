@@ -1,9 +1,16 @@
 import React, { useEffect } from 'react'
 import Bounce from 'react-reveal/Bounce';
+import Fade from 'react-reveal/Fade';
+import { useInView } from 'react-intersection-observer';
 import './Lyrics.css'
 import interludeLyrics from './Interlude-lyrics.jpeg'
 
+
+
 export default function Lyrics() {
+    const [ref, inView] = useInView({ rootMargin: '-50px' });
+
+
     useEffect(() => {
         document.title = 'Nastasha B. | Lyrics'
     })
@@ -15,198 +22,209 @@ export default function Lyrics() {
                 <h1>Lyrics</h1>
             </Bounce>
 
-            <div className="lyrics-container">
+            <div ref={ref}className="lyrics-container">
+                <Fade when={inView}>
                 <div id="song-1" className="lyrics-single-container">
+                <Fade top when={inView}>
                     <div className="song-title">
                         <h2>The Interlude</h2>
                     </div>
+                </Fade>
                     <div className="lyrics">
                         <div>
                             <p>
-                            knew that <br/>
+                            <Fade bottom when={inView}><span>knew that</span></Fade>
                             <br/>
-                            it was too real<br/>
-                            to stay <br/>
                             <br/>
-                            knew it was the wrong call<br/>
-                            before i even dialed your phone <br/>
-                            maybe i set the pace <br/>
-                            but you definitely checked my tone <br/>
-                            going toe to toe <br/>
-                            tryna make you break <br/>
-                            didn’t realize all along <br/>
-                            who was holding all the stakes<br/>
+                            <Fade bottom when={inView}><span>knew that</span></Fade>
                             <br/>
-                            cause I was free falling <br/>
-                            started to be less cautious <br/>
-                            with my moves <br/>
-                            feelings still on lock<br/>
-                            real guarded <br/>
-                            so to you it was a phase of exhaustion <br/>
-                            but if baby we a phase <br/>
-                            I’m stuck regardless <br/>
+                            <Fade bottom when={inView}><span>it was too real</span></Fade>
                             <br/>
-                            played it cool <br/>
-                            but i knew that (knew that) <br/>
                             <br/>
-                            mixed signals<br/>
-                            time to make it clear (clear)<br/>
+                            <Fade bottom when={inView}><span>knew it was the wrong call</span><br/></Fade>
+                            <Fade bottom when={inView}><span>before i even dialed your phone <br/></span></Fade>
+                            <Fade bottom when={inView}><span>maybe i set the pace <br/></span></Fade>
+                            <Fade bottom when={inView}><span>but you definitely checked my tone <br/></span></Fade>
+                            <Fade bottom when={inView}><span>going toe to toe <br/></span></Fade>
+                            <Fade bottom when={inView}><span>tryna make you break <br/></span></Fade>
+                            <Fade bottom when={inView}><span>didn’t realize all along <br/></span></Fade>
+                            <Fade bottom when={inView}><span>who was holding all the stakes<br/></span></Fade>
                             <br/>
-                            I only wanted you (you) <br/>
+                            <Fade bottom when={inView}><span>cause I was free falling <br/></span></Fade>
+                            <Fade bottom when={inView}><span>started to be less cautious <br/></span></Fade>
+                            <Fade bottom when={inView}><span>with my moves <br/></span></Fade>
+                            <Fade bottom when={inView}><span>feelings still on lock<br/></span></Fade>
+                            <Fade bottom when={inView}><span>real guarded <br/></span></Fade>
+                            <Fade bottom when={inView}><span>so to you it was a phase of exhaustion <br/></span></Fade>
+                            <Fade bottom when={inView}><span>but if baby we a phase <br/></span></Fade>
+                            <Fade bottom when={inView}><span>I’m stuck regardless <br/></span></Fade>
+                            <br/>
+                            <Fade bottom when={inView}><span>played it cool <br/></span></Fade>
+                            <Fade bottom when={inView}><span>but i knew that (knew that) <br/></span></Fade>
+                            <br/>
+                            <Fade bottom when={inView}><span>mixed signals<br/></span></Fade>
+                            <Fade bottom when={inView}><span>time to make it clear (clear)<br/></span></Fade>
+                            <br/>
+                            <Fade bottom when={inView}><span>I only wanted you (you)<br/></span></Fade>
                         </p>
                         </div>
                         <div>
                             <p>
-                            played it cool <br/>
-                            but i knew that (knew that) <br/>
+                            <Fade bottom when={inView}><span>played it cool <br/></span></Fade>
+                            <Fade bottom when={inView}><span>but i knew that (knew that) <br/></span></Fade>
                             <br/>
-                            mixed signals<br/>
-                            time to make it clear (clear)<br/>
+                            <Fade bottom when={inView}><span>mixed signals<br/></span></Fade>
+                            <Fade bottom when={inView}><span>time to make it clear (clear)<br/></span></Fade>                            
                             <br/>
-                            I only wanted you<br/>
+                            <Fade bottom when={inView}><span>I only wanted you<br/></span></Fade>                            
                             <br/>
-                            you<br/>
-                            you<br/>
-                            (you)<br/>
-                            you <br/>
-                            you <br/>
-                            (you) <br/>
+                            <Fade bottom when={inView}><span>you<br/></span></Fade>   
+                            <Fade bottom when={inView}><span>you<br/></span></Fade>   
+                            <Fade bottom when={inView}><span>(you)<br/></span></Fade>   
+                            <Fade bottom when={inView}><span>you<br/></span></Fade>   
+                            <Fade bottom when={inView}><span>you<br/></span></Fade>   
+                            <Fade bottom when={inView}><span>(you)<br/></span></Fade>  
                             <br/>
-                            don’t know how I feel <br/>
-                            but I wrote this song <br/>
-                            so I guess it’s safe to say <br/>
-                            I’m still in the motions <br/>
-                            of you <br/>
-                            even if it’s wrong for me baby<br/>
-                            i haven’t given into drunk thoughts lately <br/>
+                            <Fade bottom when={inView}><span>but I wrote this song <br/></span></Fade>   
+                            <Fade bottom when={inView}><span>so I guess it’s safe to say <br/></span></Fade>   
+                            <Fade bottom when={inView}><span>I’m still in the motions <br/></span></Fade>   
+                            <Fade bottom when={inView}><span>don’t know how I feel <br/></span></Fade>
+                            <Fade bottom when={inView}><span>of you<br/></span></Fade>  
+                            <Fade bottom when={inView}><span>even if it’s wrong for me baby<br/></span></Fade>   
+                            <Fade bottom when={inView}><span>i haven’t given into drunk thoughts lately <br/></span></Fade>   
                             <br/>
-                            wish you the best <br/>
-                            even if it leaves me <br/>
-                            in the worst way (worst way)<br/>
-                            this was way overdue <br/>
-                            even if you don’t call collect <br/>
-                            to say <br/>
+                            <Fade bottom when={inView}><span>wish you the best <br/></span></Fade>   
+                            <Fade bottom when={inView}><span>even if it leaves me <br/></span></Fade>   
+                            <Fade bottom when={inView}><span>in the worst way (worst way)<br/></span></Fade>   
+                            <Fade bottom when={inView}><span>this was way overdue <br/></span></Fade>   
+                            <Fade bottom when={inView}><span>even if you don’t call collect <br/></span></Fade>   
+                            <Fade bottom when={inView}><span>to say <br/></span></Fade>  
                             <br/>
-                            I guess it’s not all love huh?
+                            <Fade bottom when={inView}><span>I guess it’s not all love huh?</span></Fade>  
                         </p>
                         </div>
                         
                     </div>
                 </div>
-
+                </Fade>
+                <Fade when={inView}>
                 <div id="song-2" className="lyrics-single-container" style={{top:'-50px'}}>
+                <Fade bottom when={inView}>
                     <div className="song-title">
                         <h2>Specially</h2>
                     </div>
+                </Fade>
                     <div className="lyrics">
                         <div>
                             <p>
-                            yea, yea, yeah<br/>
-                            ohhh<br/>
-                            yea, yea, yeah<br/>
-                            ohhh <br/>
+                            <Fade bottom when={inView}><span>yea, yea, yeah<br/></span></Fade>  
+                            <Fade bottom when={inView}><span>ohhh <br/></span></Fade>  
+                            <Fade bottom when={inView}><span>yea, yea, yeah<br/></span></Fade>  
+                            <Fade bottom when={inView}><span>ohhh <br/></span></Fade> 
                             <br/>
-                            he treats me<br/>
-                            so<br/>
-                            he knows I’m<br/>
-                            so<br/>
-                            always treats me<br/>
-                            so<br/>
-                            so I ride for him specially<br/>
+                            <Fade bottom when={inView}><span>he treats me <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>he knows I’m<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>always treats me<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so I ride for him specially<br/></span></Fade> 
                             <br/>
-                            he treats me<br/>
-                            so<br/>
-                            he knows I’m<br/>
-                            so<br/>
-                            so he treats me<br/>
-                            so<br/>
-                            and I ride for him specially<br/>
+                            <Fade bottom when={inView}><span>he treats me <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>he knows I’m<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>always treats me<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so I ride for him specially<br/></span></Fade> 
                             <br/>
-                            when he pulls up on me<br/>
-                            greets me just the perfect way <br/>
-                            can always count on him <br/>
-                            to brighten up my day, uh <br/>
-                            and if homies ring him <br/>
-                            when he’s with me <br/>
-                            they know it’s a dub <br/>
-                            cause his shawty time too<br/>
-                            precious to him <br/>
-                            oh ooh <br/>
-                            so he ain’t leaving <br/>
-                            no ohhh <br/>
-                            he a g in the streets <br/>
-                            but a sweetie for me <br/>
-                            friendly nigga typa talk <br/>
-                            that lingo he don’t speak <br/>
+                            <Fade bottom when={inView}><span>when he pulls up on me<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>greets me just the perfect way <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>can always count on him <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>to brighten up my day, uh <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>and if homies ring him <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>when he’s with me <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>they know it’s a dub <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>cause his shawty time too<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>precious to him <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>oh ooh <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so he ain’t leaving <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>no ohhh <br/></span></Fade> 
+                            
+                            <Fade bottom when={inView}><span>he a g in the streets <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>but a sweetie for me <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>friendly nigga typa talk <br/></span></Fade>
+                            <Fade bottom when={inView}><span>that lingo he don’t speak <br/></span></Fade>
                         </p>
                         </div>
                         <div>
                             <p>
-                            so I’m always down to ride<br/>
-                            even when we’re not on sides <br/>
-                            and I’m always down to stay, uh <br/>
+                            <Fade bottom when={inView}><span>so I’m always down to ride<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>even when we’re not on sides <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>and I’m always down to stay, uh <br/></span></Fade>
                             <br/>
-                            he treats me<br/>
-                            so<br/>
-                            he knows I’m <br/>
-                            so <br/>
-                            always treats me <br/>
-                            so <br/>
-                            so I ride for him specially <br/>
+                            <Fade bottom when={inView}><span>he treats me <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>he knows I’m<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>always treats me<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so I ride for him specially<br/></span></Fade> 
                             <br/>
-                            he treats me<br/>
-                            so <br/>
-                            (wooh)<br/>
-                            he knows I’m <br/>
-                            so <br/>
-                            so he treats me <br/>
-                            so <br/>
-                            and I ride for him specially <br/>
+                            <Fade bottom when={inView}><span>he treats me <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>(wooh)<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>he knows I’m<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>always treats me<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so I ride for him specially<br/></span></Fade> 
                             <br/>
-                            spe, spe, spe, spe, spe, spe, spe, spe, specially<br/>
-                            (uh, uh, uh, uh, uh, uhhh)<br/>
-                            spe, spe, spe, spe, spe, spe, spe, spe, specially<br/>
-                            (uh, uh, uh, uh, uh, uhhh)<br/>
+                            <Fade bottom when={inView}><span>spe, spe, spe, spe, spe, spe, spe, spe, specially<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>(uh, uh, uh, uh, uh, uhhh)<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>spe, spe, spe, spe, spe, spe, spe, spe, specially<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>(uh, uh, uh, uh, uh, uhhh)<br/></span></Fade> 
                             <br/>
-                            never knew love<br/>
-                            before him<br/>
-                            ain’t no other nigga <br/>
-                            can compare <br/>
-                            toward him <br/>
-                            he’s my forever love<br/>
-                            ain’t no abortin’<br/>
+                            <Fade bottom when={inView}><span>never knew love<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>before him<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>ain’t no other nigga <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>can compare <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>toward him <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>he’s my forever love<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>ain’t no abortin’<br/></span></Fade> 
                         </p>
                         </div>
                         <div>
                             <p>
-                            never knew love<br/>
-                            before him<br/>
-                            ain’t no other nigga <br/>
-                            can compare <br/>
-                            toward him <br/>
-                            he’s my forever love<br/>
-                            so there’s no abortin’<br/>
+                            <Fade bottom when={inView}><span>never knew love<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>before him<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>ain’t no other nigga <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>can compare <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>toward him <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>he’s my forever love<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>ain’t no abortin’<br/></span></Fade> 
                             <br/>
-                            he treats me<br/>
-                            so<br/>
-                            he knows I’m <br/>
-                            so <br/>
-                            always treats me <br/>
-                            so <br/>
-                            so I ride for him specially <br/>
+                            <Fade bottom when={inView}><span>he treats me <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>he knows I’m<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>always treats me<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so I ride for him specially<br/></span></Fade> 
                             <br/>
-                            he treats me<br/>
-                            so<br/>
-                            he knows I’m <br/>
-                            so <br/>
-                            so treats me <br/>
-                            so <br/>
-                            so I ride for him specially
+                            <Fade bottom when={inView}><span>he treats me <br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>he knows I’m<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>always treats me<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so<br/></span></Fade> 
+                            <Fade bottom when={inView}><span>so I ride for him specially<br/></span></Fade> 
                             </p>
                         </div>
                         
                     </div>
                 </div>
+                </Fade>
                 <div className="clear"></div>
             </div>        
         </div>

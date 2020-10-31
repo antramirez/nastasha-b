@@ -104,3 +104,8 @@ form button:disabled {
     color: #231f22;
     cursor: default;
 }
+
+
+form input:focus, form textarea:focus {
+    outline: none;
+}

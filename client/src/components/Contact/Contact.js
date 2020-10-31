@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import './Contact.css'
 import Bounce from 'react-reveal/Bounce';
-import axios from 'axios'
+import Fade from 'react-reveal/Fade';
+import { useInView } from 'react-intersection-observer';
+import axios from 'axios';
 
 export default function Contact() {
   const [name, setName] = useState({name: '', valid: false})
   const [email, setEmail] = useState({email: '', valid: false})
   const [subject, setSubject] = useState({subject: '', valid: false})
   const [message, setMessage] = useState({message: '', valid: false})
+
+  const [ref, inView] = useInView({ rootMargin: '-50px' });
+
 
   useEffect(() => {
     document.title = 'Nastasha B. | Contact'
@@ -90,29 +95,40 @@ export default function Contact() {
           <Bounce right>
             <h1>Contact</h1>
           </Bounce>
-          <div className="contact-form-container">
+          
+          <div ref={ref} className="contact-form-container">
               <form onSubmit={handleSubmit.bind(this)} method="POST">
+              <Fade bottom when={inView}>
                 <div className="input-field-container">
                   <label htmlFor="name">Name</label><span className="required-field">*</span>
                   <input data="name" type="text" value={name.name} onChange={(e) => onNameChange(e)} onBlur={(e) => toggleInputError(e)}/>
                   <span className="error-container">Please enter your name</span>
                 </div>
+              </Fade>
+              <Fade bottom when={inView}>
                 <div className="input-field-container">
                   <label htmlFor="name">Email</label><span className="required-field">*</span>
                   <input data="email" type="email"value={email.email} onChange={(e) => onEmailChange(e)} onBlur={(e) => toggleInputError(e)}/>
                   <span className="error-container">Please enter a valid email</span>
                 </div>
+              </Fade>
+              <Fade bottom when={inView}>
                 <div className="input-field-container">
                   <label htmlFor="name">Subject</label><span className="required-field">*</span>
                   <input data="subject" type="text" value={subject.subject} onChange={(e) => onSubjectChange(e)} onBlur={(e) => toggleInputError(e)}/>
                   <span className="error-container">Please enter a subject</span>
                 </div>
+              </Fade>
+              <Fade bottom when={inView}>
                 <div id="message-container">
                   <label htmlFor="name">Message</label><span className="required-field">*</span>
                   <textarea data="message" value={message.message} onChange={(e) => onMessageChange(e)} onBlur={(e) => toggleInputError(e)}/>
                   <span className="error-container">Please enter a message</span>
                 </div>
+              </Fade>
+              <Fade bottom when={inView}>
                 <button disabled>Submit</button>
+              </Fade>
               </form>
               <div className="msg-container">
                 <h3>Message status</h3>

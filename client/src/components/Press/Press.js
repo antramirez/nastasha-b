@@ -1,9 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react'
+import Fade from 'react-reveal/Fade';
+import { useInView } from 'react-intersection-observer';
+
 import './Press.css'
 
 export default function Press( {title="", link=""} ) {
     const [toggle, updateToggle] = useState(false)
     const pressElement = useRef(null)
+    
+    const [ref, inView] = useInView({ rootMargin: '-50px' });
+
 
     useEffect(() => {
         let iFrameTimeout
@@ -18,10 +24,12 @@ export default function Press( {title="", link=""} ) {
     }, [toggle])
 
     return(
-        <div className="press-container">
-            <p ref={pressElement} onClick={() => updateToggle(!toggle)}>{title}</p>
-            {link}
-        </div>
+        <Fade when={inView}>
+            <div ref={ref} className="press-container">
+                <p ref={pressElement} onClick={() => updateToggle(!toggle)}>{title}</p>
+                {link}
+            </div>
+        </Fade>   
     )
 }
 
