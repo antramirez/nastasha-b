@@ -1,13 +1,32 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect, useRef} from 'react'
 import {NavLink} from 'react-router-dom'
 import './NavMenu.css'
 import logo from './NB-Logo.svg';
+import nbLogo from './nb-logo.gif';
 
 export default function NavMenu() {
     const [toggle, updateToggle] = useState(false);
+    const headerRef = useRef(null)
 
     // effect to take place first time after render
     useEffect(() => {
+
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (currentScrollPos > 20) {
+            if (prevScrollpos >= currentScrollPos) {
+                if (headerRef.current)
+                // headerRef.current.style.top = "0";
+                headerRef.current.classList.remove('transition-hide-header');
+            } else {
+                // headerRef.current.style.top = "-90px";
+                headerRef.current.classList.add('transition-hide-header');
+            }
+            prevScrollpos = currentScrollPos;
+        }
+        
+        }
         //TODO: remove hidden class from header if it carries over from about page (may have to do on every page)
 
         const handleResize = () => {
@@ -65,10 +84,10 @@ export default function NavMenu() {
     }
 
     return(
-        <header>
+        <header ref={headerRef}>
             <nav>
                 <div className="logo-container">
-                    <NavLink to="/" onClick={(e) => handleClick(e, true)}><img src={logo} alt="N.B." /></NavLink>
+                    <NavLink to="/" onClick={(e) => handleClick(e, true)}><img src={nbLogo} alt="N.B." /></NavLink>
                 </div>
                 <div className="nav-menu-container">
                 <ul>

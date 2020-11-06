@@ -4,7 +4,8 @@
   "description": "express app to host react app",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "heroku-postbuild": "npm install && npm run build"
   },
   "author": "Anthony Ramirez",
   "license": "ISC",

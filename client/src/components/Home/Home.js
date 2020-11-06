@@ -5,7 +5,8 @@ import FullScreenVideo from '../FullScreenVideo/FullScreenVideo'
 import Instagram from '../Instagram/Instagram'
 import './Home.css'
 import logo from './../NavMenu/NB-Logo.svg';
-import homeVid from './../../NastashaB_Viewing004_20200721.mp4'
+import homeVid from './../../homeVid.mp4'
+// import homeVid from './../../NastashaB_Viewing004_20200721.mp4'
 import visualsGif from './Visuals.gif'
 
 export default function Home() {
@@ -88,18 +89,19 @@ export default function Home() {
             </div>
 
             <div className="home-container large-container hidden">
-                {/* <Fade when={inView}> */}
+                <Fade delay={500} duration={8000}>
                     <div className="latest-single-container">
-                    <Fade bottom when={inView}>
-                        <h2>Latest Single Out</h2>
-                    </Fade>
-                </div>
+                        <Fade bottom when={inView}>
+                            <h2>Latest Single Out</h2>
+                        </Fade>
+                    </div>
+                </Fade>
                 <div className="medium-container home-latest-see-more">
-                    <Fade bottom when={inView}>
+                    <Fade delay={1200} when={inView}>
                         <h2>Latest Visuals</h2>
                     </Fade>
 
-                    <Fade bottom when={inView}>
+                    <Fade delay={1200} when={inView}>
                         <div className="latest-vis-container" id="latest-vis-container">
                             <img src={visualsGif} alt=""/>
                             <h3><a href="https://www.youtube.com" target="_blank">Watch Now</a></h3>

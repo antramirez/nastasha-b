@@ -88,6 +88,7 @@
     text-align: center;
     background-image: url('./Cover-Art.jpg');
     background-size: cover;
+    background-position-x: 20%;
     margin-bottom: 30px;
 }
 

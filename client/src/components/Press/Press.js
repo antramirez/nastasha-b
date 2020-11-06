@@ -11,23 +11,24 @@ export default function Press( {title="", link=""} ) {
     const [ref, inView] = useInView({ rootMargin: '-50px' });
 
 
-    useEffect(() => {
-        let iFrameTimeout
-        pressElement.current.classList.toggle('clicked', toggle)
-        iFrameTimeout = setTimeout(() => {
-            pressElement.current.nextElementSibling.classList.toggle('hidden-iframe', !toggle)
-        }, 350)
+    // useEffect(() => {
+    //     let iFrameTimeout
+    //     pressElement.current.classList.toggle('clicked', toggle)
+    //     iFrameTimeout = setTimeout(() => {
+    //         pressElement.current.nextElementSibling.classList.toggle('hidden-iframe', !toggle)
+    //     }, 350)
 
-        return () => {
-            clearTimeout(iFrameTimeout)
-        }
-    }, [toggle])
+    //     return () => {
+    //         clearTimeout(iFrameTimeout)
+    //     }
+    // }, [toggle])
 
     return(
         <Fade when={inView}>
             <div ref={ref} className="press-container">
-                <p ref={pressElement} onClick={() => updateToggle(!toggle)}>{title}</p>
-                {link}
+                <a href={link} target="_blank" >{title}</a>
+                {/* <p ref={pressElement} onClick={() => updateToggle(!toggle)}>{title}</p> */}
+                {/* {link} */}
             </div>
         </Fade>   
     )
