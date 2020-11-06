@@ -87,7 +87,7 @@ export default function NavMenu() {
         <header ref={headerRef}>
             <nav>
                 <div className="logo-container">
-                    <NavLink to="/" onClick={(e) => handleClick(e, true)}><img src={nbLogo} alt="N.B." /></NavLink>
+                    <NavLink to="/" onClick={(e) => handleClick(e, true)}><img src={'https://nastashab.s3.amazonaws.com/nb-logo.gif'} alt="N.B." /></NavLink>
                 </div>
                 <div className="nav-menu-container">
                 <ul>

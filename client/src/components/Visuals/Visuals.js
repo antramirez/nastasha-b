@@ -24,8 +24,8 @@ export default function Visuals() {
             </div> */}
             <div className="large-container">
                 <div ref={ref} className="visuals-container">
-                    <Fade when={inView}><Visual title={'The Interlude'} visSrc={about} gifSrc={interludeGif} spotify={'#'} apple={'#'} youtube={'#'} youtubeMusic={'#'} soundcloud={'#'} tidal={'#'} amazon={'#'} deezer={'#'}/></Fade>
-                    <Fade bottom when={inView}><Visual title={'Specially'} visSrc={specially} gifSrc={speciallyGif} spotify={'#'} apple={'#'} youtube={'#'} youtubeMusic={'#'} soundcloud={'#'} tidal={'#'} amazon={'#'} deezer={'#'}/></Fade>
+                    <Fade when={inView}><Visual title={'The Interlude'} visSrc={'https://nastashab.s3.amazonaws.com/NATBBIO1.mp4'} gifSrc={'https://nastashab.s3.amazonaws.com/Interlude.gif'} spotify={'#'} apple={'#'} youtube={'#'} youtubeMusic={'#'} soundcloud={'#'} tidal={'#'} amazon={'#'} deezer={'#'}/></Fade>
+                    <Fade bottom when={inView}><Visual title={'Specially'} visSrc={'https://nastashab.s3.amazonaws.com/Specially.MP4'} gifSrc={'https://nastashab.s3.amazonaws.com/Specially.gif'} spotify={'#'} apple={'#'} youtube={'#'} youtubeMusic={'#'} soundcloud={'#'} tidal={'#'} amazon={'#'} deezer={'#'}/></Fade>
                     <Fade bottom when={inView}><Visual title={'Behind the Scenes'} hasLinks={false} /></Fade>
                 </div>
             </div>

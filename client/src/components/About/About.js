@@ -53,7 +53,7 @@ export default function About() {
     return(
         <>
             <div className="about-video-container">
-                <FullScreenVideo vidSrc={aboutVideo} />
+                <FullScreenVideo vidSrc={'https://nastashab.s3.amazonaws.com/NATBBIO1.mp4'} />
             </div>
             <div className="about-heading-container">
                 <Bounce left>

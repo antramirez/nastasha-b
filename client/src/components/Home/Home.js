@@ -79,10 +79,10 @@ export default function Home() {
         <div ref={ref} className="home">
             <div className="home-video-container">
                 <div className="logo-container">
-                    <img src={logo} alt=""/>
+                    <img src={'https://nastashab.s3.amazonaws.com/NB-Logo.svg'} alt=""/>
                 </div>
 
-                <FullScreenVideo vidSrc={homeVid}/>
+                <FullScreenVideo vidSrc={'https://nastashab.s3.amazonaws.com/homeVid.mp4'}/>
 
                 <h2 className="hidden" onClick = { () => {
                     setViewedVid(true)}}>Enter site</h2>
@@ -103,7 +103,7 @@ export default function Home() {
 
                     <Fade delay={1200} when={inView}>
                         <div className="latest-vis-container" id="latest-vis-container">
-                            <img src={visualsGif} alt=""/>
+                            <img src={'https://nastashab.s3.amazonaws.com/Visuals.gif'} alt=""/>
                             <h3><a href="https://www.youtube.com" target="_blank">Watch Now</a></h3>
                         </div>
                     </Fade>

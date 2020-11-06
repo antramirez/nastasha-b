@@ -86,7 +86,7 @@
     width: 100%;
     height: calc(100vh - 90px - 120px);
     text-align: center;
-    background-image: url('./Cover-Art.jpg');
+    background-image: url('https://nastashab.s3.amazonaws.com/Cover-Art.jpg');
     background-size: cover;
     background-position-x: 20%;
     margin-bottom: 30px;
