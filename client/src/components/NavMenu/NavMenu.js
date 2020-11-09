@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef} from 'react'
 import {NavLink} from 'react-router-dom'
 import './NavMenu.css'
-import logo from './NB-Logo.svg';
-import nbLogo from './nb-logo.gif';
 
 export default function NavMenu() {
     const [toggle, updateToggle] = useState(false);

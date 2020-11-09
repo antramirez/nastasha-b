@@ -53,7 +53,7 @@ app.post('/confirmation', (req, res, next) => {
 
     const mail = {
         from: email,
-        to: 'ar4477@nyu.edu',  // Change to real email address
+        to: 'Nastashab.management@gmail.com',
         subject: `${subject}`,
         text: `${message}\n\nName: ${name}\nEmail: ${email}`,
         auth: {

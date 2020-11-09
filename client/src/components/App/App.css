@@ -15,12 +15,14 @@ html {
 
 @font-face {
   font-family: North Carossela;
-  src: url('https://nastashab.s3.amazonaws.com/North Carossela.otf')
+  src: './../North Carossela.otf';
+  /* src: url('https://nastashab.s3.amazonaws.com/North+Carossela.otf') */
 }
 
 @font-face {
   font-family: Cherione;
-  src: url('https://nastashab.s3.amazonaws.com/Cherione-Normal.otf')
+  src: './../Cherione-Normal.otf';
+  /* src: url('https://nastashab.s3.amazonaws.com/Cherione-Normal.otf') */
 }
 
 body {

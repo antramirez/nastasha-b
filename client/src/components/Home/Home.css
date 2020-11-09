@@ -231,8 +231,7 @@
 
 @media screen and (min-width: 650px) {
     .latest-vis-container {
-        /* background-image: url('./Visuals-cover.jpeg'); */
-        background-image: url('./Visuals.gif');
+        background-image: url('https://nastashab.s3.amazonaws.com/Visuals.gif');
         background-size: cover;
         height: 400px;
     }

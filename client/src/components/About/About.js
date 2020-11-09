@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import FullScreenVideo from '../FullScreenVideo/FullScreenVideo'
 import Bounce from 'react-reveal/Bounce';
 import './About.css'
-import aboutVideo from './../../NATBBIO1.mp4'
+// import aboutVideo from './../../NATBBIO1.mp4'
 
 export default function About() {
     

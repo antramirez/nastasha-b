@@ -62,12 +62,10 @@
 @media screen and (min-width: 660px) {
     #song-1::before {
         background-image: url('https://nastashab.s3.amazonaws.com/Interlude-lyrics.jpeg');
-
     }
     
     #song-2::before {
         background-image: url('https://nastashab.s3.amazonaws.com/Specially-lyrics.jpeg');
-        /* background-image: url('./Specially-lyrics.jpeg'); */
     }
 }
 
@@ -145,11 +143,13 @@
     }
 
     #song-1 .song-title::before {
-        background-image: url('./Interlude-lyrics.jpeg');
+        background-image: url('https://nastashab.s3.amazonaws.com/Interlude-lyrics.jpeg');
+
     }
 
     #song-2 .song-title {
-        background-image: url('./Specially-lyrics.jpeg');
+        background-image: url('https://nastashab.s3.amazonaws.com/Specially-lyrics.jpeg');
+
     }
    
     .lyrics {

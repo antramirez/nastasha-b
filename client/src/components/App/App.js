@@ -2,7 +2,6 @@ import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import './App.css'
 import NavMenu from '../NavMenu/NavMenu'
-// import Heading from '../Heading/Heading'
 import Footer from '../Footer/Footer'
 import Home from '../Home/Home'
 import About from '../About/About'
@@ -25,9 +24,7 @@ function App() {
     <BrowserRouter>
       <NavMenu></NavMenu>
       <div className="page">
-        {/* <Heading title={"Heading"}/> */}
         <Switch>
-          {/* <div className="page-content"> */}
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/photos" component={Photos} />
@@ -36,13 +33,8 @@ function App() {
           <Route exact path="/press" component={PressPage} />
           <Route exact path="/contact" component={Contact} />
           <Route component={FourZeroFour} />
-          {/* </div> */}
-          
-
-
         </Switch>
       </div>
-
       <Footer></Footer>
     </BrowserRouter>
   );

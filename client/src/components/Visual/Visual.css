@@ -53,7 +53,7 @@
 
 .streaming-services-container {
     position: absolute;
-    bottom: 60px;
+    top: 60px;
     right: 0px;
     margin-right: 40px;
 }

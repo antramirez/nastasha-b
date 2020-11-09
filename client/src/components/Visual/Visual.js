@@ -90,11 +90,7 @@ const Visual = ({title="", hasLinks=true, visSrc={}, gifSrc={}, spotify='#', app
                         <li><a href={spotify}>Spotify</a></li>
                             <li><a href={apple}>Apple Music</a></li>
                             <li><a href={youtube}>YouTube</a></li>
-                            <li><a href={youtubeMusic}>YouTube Music</a></li>
-                            <li><a href={soundcloud}>SoundCloud</a></li>
                             <li><a href={tidal}>Tidal</a></li>
-                            <li><a href={amazon}>Amazon</a></li>
-                            <li><a href={deezer}>Deezer</a></li>
                         </ul>
                     </div>
                 }

@@ -4,10 +4,6 @@ import { useInView } from 'react-intersection-observer';
 import FullScreenVideo from '../FullScreenVideo/FullScreenVideo'
 import Instagram from '../Instagram/Instagram'
 import './Home.css'
-import logo from './../NavMenu/NB-Logo.svg';
-import homeVid from './../../homeVid.mp4'
-// import homeVid from './../../NastashaB_Viewing004_20200721.mp4'
-import visualsGif from './Visuals.gif'
 
 export default function Home() {
     const [viewedVid, setViewedVid] = useState(false)

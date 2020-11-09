@@ -3,7 +3,6 @@ import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
 import { useInView } from 'react-intersection-observer';
 import './Lyrics.css'
-import interludeLyrics from './Interlude-lyrics.jpeg'
 
 
 
