@@ -40,8 +40,11 @@ export default function Photos() {
             </Bounce>
 
             <div ref={ref} className="square-photos-container">
+            <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0020.JPG" alt=""/></div></Fade>
+                <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0021.JPG" alt=""/></div></Fade>
+                <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0022.JPG" alt=""/></div></Fade>
+                <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0023.JPG" alt=""/></div></Fade>
                 <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0003.JPG" alt=""/></div></Fade>
-                <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/resize2.jpg" alt=""/></div></Fade>
                 <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0002.JPG" alt=""/></div></Fade>
                 <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0007.JPG" alt=""/></div></Fade>
                 <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0009.JPG" alt=""/></div></Fade>
@@ -58,10 +61,6 @@ export default function Photos() {
                 <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0016.JPG" alt=""/></div></Fade>
                 <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0017.JPG" alt=""/></div></Fade>
                 <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0018.JPG" alt=""/></div></Fade>
-                <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0020.JPG" alt=""/></div></Fade>
-                <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0021.JPG" alt=""/></div></Fade>
-                <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0022.JPG" alt=""/></div></Fade>
-                <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0023.JPG" alt=""/></div></Fade>
                 <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0024.JPG" alt=""/></div></Fade>
                 <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0025.JPG" alt=""/></div></Fade>
                 <Fade  when={inView}><div className="landscape" id="id3"><img onClick={(e) => handlePhotoClick(e)} src="https://nastashab.s3.amazonaws.com/IMG_0026.JPG" alt=""/></div></Fade>
