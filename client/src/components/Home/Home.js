@@ -100,7 +100,7 @@ export default function Home() {
                     <Fade delay={1200} when={inView}>
                         <div className="latest-vis-container" id="latest-vis-container">
                             <img src={'https://nastashab.s3.amazonaws.com/Visuals.gif'} alt=""/>
-                            <h3><a href="https://www.youtube.com" target="_blank">Watch Now</a></h3>
+                            <h3><a href="https://www.youtube.com/watch?v=8dtq4-roxGw" target="_blank" rel="noopener noreferrer">Watch Now</a></h3>
                         </div>
                     </Fade>
                     <Fade bottom when={inView}>
