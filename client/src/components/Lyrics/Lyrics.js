@@ -84,10 +84,10 @@ export default function Lyrics() {
                             <Fade duration={4000} bottom when={inView}><span>you<br/></span></Fade>   
                             <Fade duration={4000} bottom when={inView}><span>(you)<br/></span></Fade>  
                             <br/>
+                            <Fade duration={4000} bottom when={inView}><span>don’t know how I feel <br/></span></Fade>
                             <Fade duration={4000} bottom when={inView}><span>but I wrote this song <br/></span></Fade>   
                             <Fade duration={4000} bottom when={inView}><span>so I guess it’s safe to say <br/></span></Fade>   
                             <Fade duration={4000} bottom when={inView}><span>I’m still in the motions <br/></span></Fade>   
-                            <Fade duration={4000} bottom when={inView}><span>don’t know how I feel <br/></span></Fade>
                             <Fade duration={4000} bottom when={inView}><span>of you<br/></span></Fade>  
                             <Fade duration={4000} bottom when={inView}><span>even if it’s wrong for me baby<br/></span></Fade>   
                             <Fade duration={4000} bottom when={inView}><span>i haven’t given into drunk thoughts lately <br/></span></Fade>   
