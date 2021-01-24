@@ -84,16 +84,21 @@ const Visual = ({title="", hasLinks=true, visSrc={}, gifSrc={}, spotify='#', app
              }} />
             <div className="visual-inner-container">
                 <h2>{title}</h2>
-                {hasLinks &&
-                    <div className="streaming-services-container">
+                <div className="streaming-services-container">
+                    {hasLinks &&
                         <ul ref={streamingServicesRef}>
-                        <li><a href={spotify}>Spotify</a></li>
+                            <li><a href={spotify}>Spotify</a></li>
                             <li><a href={apple}>Apple Music</a></li>
                             <li><a href={youtube}>YouTube</a></li>
                             <li><a href={tidal}>Tidal</a></li>
                         </ul>
-                    </div>
-                }
+                    } 
+                    {!hasLinks && 
+                        <ul ref={streamingServicesRef}>
+                            <li><a href={visSrc} target="_blank" rel="noopener noreferrer">Watch Now</a></li>
+                        </ul>
+                    }
+                </div>
             </div>
         </div>
     )

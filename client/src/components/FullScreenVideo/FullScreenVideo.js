@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 
 export default function FullScreenVideo({vidSrc=''}) {
     const vidParentRef = useRef(null)
@@ -44,19 +44,4 @@ export default function FullScreenVideo({vidSrc=''}) {
         }} />
     )
 }
-
-
-{/* <div style={{display:'block !important', background:'blue'}} ref={vidParentRef} dangerouslySetInnerHTML={{
-    __html:`
-        <video class="full-screen-video" autoPlay loop muted playsInline autobuffer>
-            <source src=${vidSrc} type="video/mp4" />
-        </video>
-    `
-}} /> */}
-
-{/* <div ref={vidParentRef}>
-    <video class="full-screen-video" autoPlay loop muted playsInline autobuffer>
-        <source src={vidSrc} type="video/mp4" />
-    </video>
-</div> */}
 
