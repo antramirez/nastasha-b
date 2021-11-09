@@ -4,7 +4,7 @@ import Instafeed from './instafeed'
 export default function Instagram() {
     useEffect(() => {
         var feed = new Instafeed({
-            accessToken: 'IGQVJVYUNYMnBTbTd4N1FGYU4xOWVoZAEtwbmx0ZA1k4TTBOOXpDWDNvdHFKOC1fSnZAPOGtlbW9pVDBOdzJmdG9uN1VXX3FLM3BaWHF3NWF3UFd2M2IwUzlmSTg3MEM4U25hZAW5wREtB',
+            accessToken: 'IGQVJVa0o4cGF3TXlaNHd2Smw5dkd6T0lpQjlOa1R2ZAG9PdHhUMWVvUFcwa2xFbHdfazltQklCakVudVhuY0x2QkhmN1NLMTJqZA3ZAZAZAEpoMFgxZA1NEdlU0am14enQ3XzRMTHZAXbG5B',
             limit: 3
         })
         feed.run();
